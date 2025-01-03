@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* header + nav: https://stackoverflow.com/questions/77718681/header-with-a-logo-and-a-nav-bar-items-in-one-line */
+  header {
+    display: flex;
+    width: 100%;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    background-color: rgb(0, 0, 0);
+    border-bottom: solid;
+    padding: 0.5rem 1rem; 
+  }
+  
+  header > img { /* logo image */
+    height: 60px;
+    width: auto; 
+  }
+
+  #underline {
+    margin-top: -20px;
+    font-size: 455%;
+    text-decoration: underline;
+  }
+
+  .menu_img {
+    width: 100%; 
+    height: auto;
+    padding: 4px 4px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+  }
+  
+  nav { /* alligns nav text to be horizontally center */
+    display: flex;
+    flex-direction: row;
+    flex: 1; /* Use the rest of the available space of the <header> */
+    justify-content: left; /* Keep the links in the center of this element  */
+    align-items: center; /* Puts the links vertically in the center of the <nav> */
+  }
+  nav a { /* properties of nav a text */
+    padding: 1rem;
+    text-decoration: none; /* Take away the default link styling  */
+    color: rgb(255, 255, 255);
+    font-family: Helvetica;
+    font-size: 125%;
+    border-bottom: 2px solid transparent;
+    margin-left: 1cm;
+  }
+  nav  a:hover { /* line underneath nav text when u hover it - highlights where user will click */
+    border-bottom: 3px solid rgb(255, 255, 255);
+    transition: border-bottom 0.4s ease-in;
+  }
+
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .wide_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 3rem;
+  }
+  
+  figure {
+    margin: 0; /* Remove any default margin */
+  }
+  
+  .main_img {
+    width: 100%; /* https://www.w3schools.com/howto/howto_css_image_responsive.asp */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: -50px;
+  }
+
+  .google_img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  main h1 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 300%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  
+  main p {
+    margin-top: 25px; /* https://generatepress.com/forums/topic/spacing-between-heading-and-paragraph/ */
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 200%;
+    font-style: italic;
+  }
+
+  .menu_button {
+    background-color: #ffffff; 
+    border: 2px solid black; 
+    border-radius: 1rem;
+    color: rgb(0, 0, 0); 
+    padding: 20px 30px; /* size of button */
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-family: Helvetica; 
+    font-size: 20px; 
+    margin: 15px 2px; 
+    margin-right: 0.3cm;
+    cursor: pointer; 
+  }
+
+  .res_button {
+    background-color: #000000; 
+    border: 2px solid black;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255); 
+    padding: 20px 30px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-family: Helvetica; 
+    font-size: 20px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+  }
+
+  .menu_button:hover, .res_button:hover {
+    border-radius: 2rem;
+    transition: border-radius 0.4s ease;
+  }
+
+  .text a:hover {
+    border-radius: 2rem;
+    transition: border-radius 0.4s ease;
+  }
+
+  footer {
+     /* https://forum.freecodecamp.org/t/how-to-keep-footer-at-bottom-of-the-page/651022 */
+    height: 100px;
+    width: 100%;
+    margin-top: -50px;
+    clear: both;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    background-color: rgb(0, 0, 0);
+    border-bottom: solid;
+    padding: 0.5rem 1rem; 
+  }
+
+  /* https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
+  
+  .fa-brands {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-top: 0.2cm;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    margin-left: 35px;
+  }
+
+  .fa-solid {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-top: 0.2cm;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    margin-right: 1rem;
+  }
+
+.fa-brands:hover {
+  color: rgb(255, 255, 255);
+  border-radius: 30%;
+  transition: border-radius 0.4s ease; /* https://developer.mozilla.org/en-US/docs/Web/CSS/transition */
+}
+
+.fa-youtube:hover {
+  background: #ff0000;
+}
+
+.fa-instagram:hover {
+  background: #125688;
+}
+
+.fa-tiktok:hover {
+  background-color: rgb(255, 20, 147);
+}
+
+/* headings & paragraphs - different sizes for different pages */
+.about h1 {
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+.about p {
+  font-size: 150%;
+  margin: 3rem;
+  font-style: normal;
+}
+
+.contact p {
+  font-size: 120%;
+  margin: 3rem;
+  font-style: normal;
+  margin: 0; /* https://stackoverflow.com/questions/2787310/how-to-reduce-the-space-between-p-tags */
+}
+
+.contact li {
+  font-size: 120%;
+  margin: 3rem;
+  font-style: normal;
+  margin-top: 25px; /* https://generatepress.com/forums/topic/spacing-between-heading-and-paragraph/ */
+  color: rgb(0, 0, 0);
+  font-family: Helvetica;
+  margin: 1.2rem;
+  margin-left: 2rem;
+}
+
+.award_img {
+  height: 35px;
+  width: auto; 
+  margin: 0.25rem;
+  margin-left: 5rem;
+  margin-top: 1.5rem;
+}
+
+/* https://stackoverflow.com/questions/46802769/style-bullet-list-with-arrows */
+ul { 
+  position: relative;
+  list-style: none;
+  margin-left: 3rem;
+}
+
+li::before {
+  content: '⮕';
+  position: absolute;
+  left: 0;
+}
+
+/* gallery - responsive : https://www.w3schools.com/css/css3_flexbox_responsive.asp */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+.column img {
+  width: 100%;
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* https://www.w3schools.com/css/css_form.asp */
+
+input[type=text], input[type=tel], input[type=datetime-local], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-left: -4rem;
+  font-family: helvetica;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 4rem;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  font-family: helvetica;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 1000px) {
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .col-25 {
+    margin-left: 2rem;
+  }
+
+  .col-75 {
+    margin-bottom: 30px;
+    margin-left: 6rem;
+  }
+}
+
+/* RESPONSIVE LAYOUT
+/* Medium device */
+@media (max-width: 768px) { 
+  .column { /* makes a two column-layout instead of four columns */
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  main h1 {
+    font-size: 150%;
+  }
+  
+  main p {
+    font-size: 140%;
+  }
+
+  #underline {
+    font-size: 250%;
+  }
+
+  .menu_button, .res_button {
+    padding: 15px 20px; /* size of button */
+    font-size: 90%;
+  }
+
+  .res_button {
+    margin-bottom: 1rem;
+  }
+
+  .contact p {
+    font-size: 75%;
+  }
+  
+  .contact li {
+    font-size: 50%;
+  }
+
+  .about p {
+    font-size: 75%;
+  }
+}
+
+/* Small devices */
+@media (max-width: 600px) {
+  .column { /* makes the two columns stack on top of each other instead of next to each other */
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .nav-right {
+    float: right;
+  }
+
+  main h1 {
+    font-size: 125%;
+  }
+
+  main p {
+    font-size: 120%;
+  }
+
+  #underline {
+    font-size: 200%;
+  }
+
+  .menu_button, .res_button {
+    padding: 15px 20px; /* size of button */
+    font-size: 80%;
+  }
+
+  .res_button {
+    margin-bottom: 1rem;
+  }
+}
+
+/* https://www.w3schools.com/cssref/atrule_media.php , https://www.w3schools.com/howto/howto_css_responsive_header.asp */
+/* Max width is set to 1000px - for header & nav so that all nav elements can be accessed */
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+
+  nav a {
+    padding: 1rem 0;
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+  footer {
+    flex-direction: row; 
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .fa-brands, .fa-solid {
+    margin-left: 10px; /* Adjust icon spacing */
+  }
+
+  .award_img {
+    height: 20px;
+    width: auto; 
+  }
+
+  /*
+  https://www.w3schools.com/html/html_css.asp - css
+  https://www.w3schools.com/html/html5_semantic_elements.asp - semantics
+  https://stackoverflow.com/questions/77718681/header-with-a-logo-and-a-nav-bar-items-in-one-line - css code for header (nav + logo)
+  https://codedamn.com/news/frontend/how-to-put-image-and-text-side-by-side-in-html - flexbox (text left side, img right side)
+  https://www.reddit.com/r/html5/comments/u7o29l/how_to_create_a_button_that_works_as_a_link_to/?rdt=43058 - menu buttons
+ 
+  */
